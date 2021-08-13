@@ -8,10 +8,12 @@ const personalMovieDB = {
     privat: false
 };
 
-const movieName = prompt('Один из последних просмотренных фильмов?');
-const movieRating = prompt('На сколько оцените его?');
-personalMovieDB.movies.movieName = movieRating;
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', ''),
+    c = prompt('Один из последних просмотренных фильмов?', ''),
+    d = prompt('На сколько оцените его?', '');
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB.count);
-console.log(personalMovieDB.movies.movieName);
 console.log(personalMovieDB.movies);
