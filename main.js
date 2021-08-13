@@ -32,15 +32,14 @@ const personalMovieDB = {
 
 
 for (let i = 0; i < 2; i++) {
-    let a = '', b = '';
-    while (a.length == 0 || a.length > 50) {
+    let a, b;
+    do {
         a = prompt('Назвите один из последних просмотренных фильмов', '');
-    }
-
-    while (b.length == 0 || b.length > 50) {
-        b = prompt('На сколько вы бы оценили его?', '');
-    }
+    } while (a.length == 0 || a.length > 50);
     
+    do {
+        b = prompt('На сколько вы бы оценили его?', '');
+    } while (b.length == 0 || b.length > 50);
     personalMovieDB.movies[a] = b;
 }
 
